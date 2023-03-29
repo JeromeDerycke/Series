@@ -11,16 +11,14 @@ class MainController extends AbstractController
      * @Route("/", name="main_home")
      */
     public function home(){
-        echo "Coucou";
-        die();
+        return $this->render("main/home.html.twig");
     }
 
     /**
      * @Route("/test", name="main_test")
      */
     public function test(){
-        echo "Testounet";
-        die();
+        return $this->render("main/test.html.twig");
     }
 
 }
