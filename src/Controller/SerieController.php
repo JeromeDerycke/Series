@@ -99,4 +99,14 @@ class SerieController extends AbstractController
 
         return $this->render('serie/create.html.twig');
     }
+
+    /**
+     * @Route ("/series/delete/{id}", name="/series_delete")
+     */
+    public function delete(Serie $serie, EntityManagerInterface $entityManager){
+        $entityManager->remove($serie);
+        $entityManager->flush();
+
+        return$this->render(':main:home.html.twig');
+    }
 }
