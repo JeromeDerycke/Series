@@ -28,4 +28,11 @@ class MainController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/error", name="main_error")
+     */
+    public function error(){
+        return $this->render("main/error404.html.twig");
+    }
+
 }
